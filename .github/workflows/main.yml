@@ -26,7 +26,7 @@ jobs:
         msbuild VirtualGuardDevirt.sln /p:Configuration=Release /m /verbosity:normal /p:WarningLevel=0
     - name: Create ZIP
       run: |
-        Compress-Archive -Path Release/* -DestinationPath VirtualGuardDevirt
+        Compress-Archive -Path bin/Release/* -DestinationPath VirtualGuardDevirt
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
